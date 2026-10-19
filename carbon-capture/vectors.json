@@ -1,0 +1,113 @@
+{
+ "source": "tools/qag_virology_sim.py",
+ "constants": {
+  "f_H_mhz": 1420.405,
+  "K_ASB": 0.013829,
+  "Phi": 1.194797,
+  "t_pixel_s": 3.41e-07,
+  "host_zeta_mv": -55.0,
+  "safety_threshold_mv": 20.0
+ },
+ "vectors": [
+  {
+   "name": "PBCV-1 Virion Assembly",
+   "pdb": "1M4X",
+   "mw_kda": 15400.0,
+   "z_v": 1314000.0,
+   "f_kill_mhz": 7273.96,
+   "zeta_v_mv": -5.09,
+   "delta_zeta_mv": 49.91,
+   "status": "SECURE"
+  },
+  {
+   "name": "PBCV-1 Capsid Vp54",
+   "pdb": "1J5Q",
+   "mw_kda": 324.0,
+   "z_v": 26940.0,
+   "f_kill_mhz": 5267.05,
+   "zeta_v_mv": -7.01,
+   "delta_zeta_mv": 47.99,
+   "status": "SECURE"
+  },
+  {
+   "name": "Chlorella Virus AR158",
+   "pdb": "3J42",
+   "mw_kda": 14800.0,
+   "z_v": 1241000.0,
+   "f_kill_mhz": 7244.62,
+   "zeta_v_mv": -24.01,
+   "delta_zeta_mv": 30.99,
+   "status": "SECURE"
+  },
+  {
+   "name": "Chlorella Virus NY-2A",
+   "pdb": "3J41",
+   "mw_kda": 15100.0,
+   "z_v": 1278000.0,
+   "f_kill_mhz": 7259.41,
+   "zeta_v_mv": -13.84,
+   "delta_zeta_mv": 41.16,
+   "status": "SECURE"
+  },
+  {
+   "name": "ATCV-1 Broad-Host Capsid",
+   "pdb": "3J24",
+   "mw_kda": 13900.0,
+   "z_v": 1146000.0,
+   "f_kill_mhz": 7208.57,
+   "zeta_v_mv": -6.62,
+   "delta_zeta_mv": 48.38,
+   "status": "SECURE"
+  },
+  {
+   "name": "Recombinant CA II Cassette",
+   "pdb": "2VVA",
+   "mw_kda": 58.4,
+   "z_v": 4434.0,
+   "f_kill_mhz": 4339.73,
+   "zeta_v_mv": -24.71,
+   "delta_zeta_mv": 30.29,
+   "status": "SECURE"
+  },
+  {
+   "name": "Thermostable CA II (DvCA10)",
+   "pdb": "1V9E",
+   "mw_kda": 64.2,
+   "z_v": 4921.0,
+   "f_kill_mhz": 4395.74,
+   "zeta_v_mv": -13.12,
+   "delta_zeta_mv": 41.88,
+   "status": "SECURE"
+  },
+  {
+   "name": "RuBisCO Activase Complex",
+   "pdb": "3ZXG",
+   "mw_kda": 440.0,
+   "z_v": 35000.0,
+   "f_kill_mhz": 5404.14,
+   "zeta_v_mv": -19.98,
+   "delta_zeta_mv": 35.02,
+   "status": "SECURE"
+  },
+  {
+   "name": "BiFeO3 Doped Nanogel",
+   "pdb": "SYN_NP",
+   "mw_kda": 2800.0,
+   "z_v": 273300.0,
+   "f_kill_mhz": 6467.43,
+   "zeta_v_mv": -22.61,
+   "delta_zeta_mv": 32.39,
+   "status": "SECURE"
+  },
+  {
+   "name": "Extremophile Host Baseline",
+   "pdb": "HOST",
+   "mw_kda": 85000.0,
+   "z_v": 6269000.0,
+   "f_kill_mhz": 8085.34,
+   "zeta_v_mv": -5.38,
+   "delta_zeta_mv": 49.62,
+   "status": "SECURE"
+  }
+ ]
+}

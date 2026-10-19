@@ -1,0 +1,18 @@
+{
+ "source": "tools/pillar1_acoustic_sweep.py",
+ "optimum": {
+  "P0_star_MPa": 17.07,
+  "Pac_star_MPa": 20.0,
+  "kLa_s": 3.8267,
+  "R_g_g_h": 2.404,
+  "enzyme_survival_pct": 88.5,
+  "fatigue_cycles": ">1e12"
+ },
+ "constants": {
+  "D_CO2_D2O_m2_s": 1.62e-09,
+  "f_MHz": 0.7,
+  "a_v_m2_m3": 1500,
+  "theta_c": 0.65,
+  "beta": 0.45
+ }
+}

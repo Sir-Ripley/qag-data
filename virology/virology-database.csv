@@ -1,0 +1,12 @@
+﻿id,pdb_id,name,molecular_weight_kda,atom_count,density_proxy,disruptive_frequency_mhz,zeta_potential_mv,timestamp
+11,3IYQ,tmRNA-SmpB: a journey to the center of the bacterial ribosome,130.3,8458,0.01540553,2573.583527,-15.008776,2026-07-21 17:17:25 UTC
+10,1F8R,CRYSTAL STRUCTURE OF L-AMINO ACID OXIDASE FROM CALLOSELASMA RHODOSTOMA COMPLEXED WITH CITRATE,232.27,17632,0.01317321,2789.997616,-15.009514,2026-07-21 17:17:25 UTC
+9,2ZME,Integrated structural and functional model of the human ESCRT-II complex,80.13,5127,0.01562902,2332.125367,-15.007953,2026-07-21 17:17:25 UTC
+8,1HIW,TRIMERIC HIV-1 MATRIX PROTEIN,90.79,5348,0.01697644,2438.248905,-15.008314,2026-07-21 17:17:25 UTC
+7,3J3Q,Atomic-level structure of the entire HIV-1 capsid,34852.58,2440800,0.01427916,5416.477419,-15.01847,2026-07-21 17:17:25 UTC
+6,4HMG,REFINEMENT OF THE INFLUENZA VIRUS HEMAGGLUTININ BY SIMULATED ANNEALING,174.22,12243,0.01423017,2681.910623,-15.009145,2026-07-21 17:17:25 UTC
+5,1YYN,A common binding site for disialyllactose and a tri-peptide in the C-fragment of tetanus neurotoxin,51.4,3814,0.01347666,2030.917442,-15.006925,2026-07-21 17:17:24 UTC
+4,6WPT,Structure of the SARS-CoV-2 spike glycoprotein in complex with the S309 neutralizing antibody Fab fragment (open state),489.27,24326,0.02011305,3391.53523,-15.011565,2026-07-21 17:17:24 UTC
+3,7BNM,Closed conformation of D614G SARS-CoV-2 spike protein,403.04,25971,0.01551885,3157.967218,-15.010769,2026-07-21 17:17:24 UTC
+2,6LZG,Structure of novel coronavirus spike receptor-binding domain complexed with its receptor ACE2,93.5,6790,0.01377025,2346.268717,-15.008001,2026-07-21 17:17:24 UTC
+1,6VXX,Structure of the SARS-CoV-2 spike glycoprotein (closed state),438.26,23694,0.01849667,3291.589712,-15.011224,2026-07-21 17:07:12 UTC

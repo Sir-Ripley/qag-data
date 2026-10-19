@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>qag-data — R&R Droids shared research data API</title>
+<meta name="description" content="Shared JSON/CSV data backend for the R&R Droids research sites. CORS-open, versioned, free for research use.">
+<style>
+:root{--bg:#070B12;--card:#101926;--line:#1d2b40;--txt:#e9f4f8;--dim:#8b98ad;--cyan:#00F0FF;--green:#00E676;--amber:#FFAB00;--violet:#9d7bff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(1000px 480px at 50% -8%,#0d1a2e 0%,var(--bg) 60%) fixed,var(--bg);color:var(--txt);font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65}
+h1,h2{font-family:"Space Grotesk",Inter,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.1rem}
+header{padding:3rem 0 1.6rem;text-align:center}
+header h1{font-size:clamp(1.6rem,5vw,2.4rem);background:linear-gradient(92deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#c6d2e2;max-width:640px;margin:.8rem auto}
+.badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;border-radius:999px;padding:.18rem .65rem;margin:.15rem .2rem;white-space:nowrap}
+.b-live{background:rgba(0,230,118,.13);color:var(--green);border:1px solid rgba(0,230,118,.45)}
+.b-api{background:rgba(0,240,255,.12);color:var(--cyan);border:1px solid rgba(0,240,255,.45)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:.9rem;margin:1.4rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem}
+.card h3{font-size:1rem;color:var(--cyan);margin-bottom:.3rem;word-break:break-all}
+.card p{font-size:.86rem;color:#c6d2e2}
+.card .meta{font-size:.76rem;color:var(--dim);font-family:ui-monospace,monospace;margin-top:.5rem}
+.card a{color:var(--cyan);text-decoration:none;font-size:.85rem}
+.card a:hover{text-decoration:underline}
+.status{font-size:.78rem;margin-top:.4rem}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.4rem}
+.dot.ok{background:var(--green);box-shadow:0 0 8px var(--green)}
+.dot.bad{background:var(--amber)}
+.consumers{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin:1.4rem 0}
+.consumers a{color:var(--cyan)}
+code{background:#0a1420;border:1px solid var(--line);border-radius:6px;padding:.1rem .45rem;font-size:.82rem;color:var(--green)}
+pre{background:#0a1420;border:1px solid var(--line);border-radius:10px;padding:1rem;overflow-x:auto;font-size:.8rem;color:#d5e2f2;margin-top:.8rem}
+footer{text-align:center;color:var(--dim);font-size:.82rem;padding:2rem 0;border-top:1px solid var(--line);margin-top:2rem}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><div class="wrap">
+  <h1>qag-data</h1>
+  <p class="sub">The shared research-data backend for R&amp;R Droids sites. Versioned JSON &amp; CSV, <code>CORS *</code>, free for research use. Every dataset below is fetched live by at least one production site.</p>
+  <span class="badge b-live">● LIVE</span> <span class="badge b-api">CORS-OPEN API</span>
+</div></header>
+<main><div class="wrap">
+  <h2 style="color:var(--cyan);margin-top:.6rem">Datasets</h2>
+  <div class="grid" id="sets"></div>
+  <div class="consumers">
+    <h2 style="color:var(--cyan);font-size:1.1rem">Consuming sites</h2>
+    <p style="font-size:.9rem;color:#c6d2e2;margin:.5rem 0">These production sites read this API at runtime (with embedded fallbacks if unreachable):</p>
+    <ul style="list-style:none;font-size:.9rem">
+      <li>🌱 <a href="https://qag-carbon-capture.vercel.app">Hybrid Bio-Acoustic Carbon Capture</a> — Pillars 2 &amp; 3</li>
+      <li>🦠 <a href="https://qag-virology-demo-qag-works.vercel.app">QAG Virology Hub</a> — pathogen datasets</li>
+    </ul>
+    <h3 style="font-size:.95rem;color:var(--txt);margin:1rem 0 .4rem">Usage</h3>
+    <pre>fetch('https://qag-data.vercel.app/carbon-capture/vectors.json')
+  .then(r =&gt; r.json())
+  .then(d =&gt; console.log(d.vectors.length, 'vectors'));
+// manifest: GET /index.json</pre>
+    <h3 style="font-size:.95rem;color:var(--txt);margin:1rem 0 .4rem">Sibling backends</h3>
+    <ul style="list-style:none;font-size:.9rem">
+      <li>🌌 <a href="https://qag-sparc-data.vercel.app/galaxies175.json">qag-sparc-data</a> — 175-galaxy SPARC kinematics API (CORS-open) powering the <a href="https://qag-kinetics-lab.vercel.app">Kinetics Lab</a> explorer; full v3.0 fit table at <a href="https://qag-sparc-data.vercel.app/sparc175-corrected.csv">sparc175-corrected.csv</a></li>
+      <li>🗄️ <span style="font-family:ui-monospace,monospace">qag-shared-data</span> — Vercel Blob store for binary assets (decks, PDFs, large files)</li>
+    </ul>
+  </div>
+</div></main>
+<footer><div class="wrap">
+  <p><strong>R&amp;R Droids</strong> · Rodney A. Ripley Jr. · shared data infrastructure · 2026</p>
+  <p>Raw manifest: <a href="/index.json" style="color:var(--cyan)">index.json</a></p>
+</div></footer>
+<script>
+const SETS=[
+ ["carbon-capture/vectors.json","Pillar 2 · Virology vector screening","10 QAG-screened viral vectors with f_kill frequencies and host safety margins."],
+ ["carbon-capture/evolution-run.json","Pillar 3 · Evolution run","500-generation distributed evolutionary Monte Carlo (fixation, lipid, CA II, viability)."],
+ ["carbon-capture/pillar1-optimum.json","Pillar 1 · Acoustic optimum","Sweep optimum callouts: P₀*, P_ac*, kLa, fixation rate, enzyme survival."],
+ ["virology/master-pathogen-index.json","Virology · Master pathogen index","QAG master pathogen index: human + veterinary targets with metadata."],
+ ["virology/research-platform-v2.csv","Virology · Research platform v2","QAG research platform dataset (CSV)."],
+ ["virology/viral-decoherence-index-v2.csv","Virology · Decoherence index","Viral decoherence index (CSV)."],
+ ["virology/virology-database.csv","Virology · Database","QAG virology database (CSV)."]
+];
+const grid=document.getElementById('sets');
+SETS.forEach(([path,title,desc])=>{
+  const el=document.createElement('div');
+  el.className='card';
+  el.innerHTML=`<h3>${path}</h3><p><strong style="color:var(--txt)">${title}</strong><br>${desc}</p>
+    <div class="status"><span class="dot bad" data-dot></span><span data-msg>checking…</span></div>
+    <div class="meta"><a href="/${path}" target="_blank" rel="noopener">open raw ↗</a></div>`;
+  grid.appendChild(el);
+  fetch('/'+path).then(r=>{
+    const dot=el.querySelector('[data-dot]'), msg=el.querySelector('[data-msg]');
+    if(r.ok){ dot.className='dot ok'; return r.text().then(t=>{ msg.textContent=`OK · ${(t.length/1024).toFixed(1)} KB`; }); }
+    dot.className='dot bad'; msg.textContent='HTTP '+r.status;
+  }).catch(()=>{ el.querySelector('[data-msg]').textContent='unreachable'; });
+});
+</script>
+</body>
+</html>

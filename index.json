@@ -1,0 +1,42 @@
+{
+ "name": "R&R Droids shared research data API",
+ "version": "2026-10-19",
+ "cors": "*",
+ "datasets": [
+  {
+   "path": "virology/master-pathogen-index.json",
+   "format": "json",
+   "description": "QAG Master Pathogen Index (30 human targets + veterinary)"
+  },
+  {
+   "path": "virology/research-platform-v2.csv",
+   "format": "csv",
+   "description": "QAG Research Platform v2 dataset"
+  },
+  {
+   "path": "virology/viral-decoherence-index-v2.csv",
+   "format": "csv",
+   "description": "Viral decoherence index"
+  },
+  {
+   "path": "virology/virology-database.csv",
+   "format": "csv",
+   "description": "QAG virology database"
+  },
+  {
+   "path": "carbon-capture/vectors.json",
+   "format": "json",
+   "description": "Pillar 2 QAG virology vector screening (10 vectors, f_kill + safety margins)"
+  },
+  {
+   "path": "carbon-capture/evolution-run.json",
+   "format": "json",
+   "description": "Pillar 3 distributed evolutionary Monte Carlo (500 generations)"
+  },
+  {
+   "path": "carbon-capture/pillar1-optimum.json",
+   "format": "json",
+   "description": "Pillar 1 acoustic sweep optimum callouts"
+  }
+ ]
+}
