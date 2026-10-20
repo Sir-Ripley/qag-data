@@ -15,6 +15,7 @@ versioned, free for research use. Live at **https://qag-data.vercel.app**
 | `virology/research-platform-v2.csv` | QAG research platform dataset |
 | `virology/viral-decoherence-index-v2.csv` | Viral decoherence index |
 | `virology/virology-database.csv` | QAG virology database |
+| `qag/cross_validation.json` | QAG cross-framework validation (Reports 1-8) |
 
 ## Consuming sites
 
