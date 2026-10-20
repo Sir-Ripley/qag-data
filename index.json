@@ -1,6 +1,6 @@
 {
  "name": "R&R Droids shared research data API",
- "version": "2026-10-19",
+ "version": "2026-10-20",
  "cors": "*",
  "datasets": [
   {
@@ -37,6 +37,11 @@
    "path": "carbon-capture/pillar1-optimum.json",
    "format": "json",
    "description": "Pillar 1 acoustic sweep optimum callouts"
+  },
+  {
+   "path": "qag/cross_validation.json",
+   "format": "json",
+   "description": "QAG cross-framework validation results (Reports 1-8: SPARC cross-runs, universal scales, X-COP/eROSITA, QAG Cluster Law incl. Bullet Cluster morphology)"
   }
  ]
 }
