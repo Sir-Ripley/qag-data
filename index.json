@@ -1,6 +1,6 @@
 {
  "name": "R&R Droids shared research data API",
- "version": "2026-10-20",
+ "version": "2026-11-06",
  "cors": "*",
  "datasets": [
   {
@@ -42,6 +42,13 @@
    "path": "qag/cross_validation.json",
    "format": "json",
    "description": "QAG cross-framework validation results (Reports 1-8: SPARC cross-runs, universal scales, X-COP/eROSITA, QAG Cluster Law incl. Bullet Cluster morphology)"
+  }
+ ],
+ "siblings": [
+  {
+   "name": "QAG SPARC Data API",
+   "url": "https://qag-sparc-data.vercel.app/",
+   "description": "175 SPARC galaxies: galaxies175.json (slim), galaxies175.full.json (full fidelity + provenance), cross_validation.json (Stalhammar series), replication.json (Replication Lab verdicts, failures included) \u2014 canonicalised November 2026"
   }
  ]
 }
